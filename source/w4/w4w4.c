@@ -3,7 +3,7 @@
 int main(){
     char num[1001];    
     while(1){
-        int sum1=0,sum2=0,i;
+        int sum1=0,sum2=0,i,d;
         scanf("%s", num);
         if (num[0]=='0'){
             break;
@@ -15,7 +15,7 @@ int main(){
                 sum2+=num[i]-'0';
             }
         }
-        int d=sum1-sum2;        
+        d=sum1-sum2;        
         if(d%11==0){
             printf("%s is a multiple of 11.\n", num);
         } else {
