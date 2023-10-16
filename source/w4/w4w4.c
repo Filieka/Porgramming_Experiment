@@ -17,9 +17,10 @@ int main(){
         }
         d=sum1-sum2;        
         if(d%11==0){
-            printf("%s is a multiple of 11.\n", num);
-        } else {
-            printf("%s is not a multiple of 11.\n", num);
+            printf("%s is a multiple of 11.\n",num);
+        }
+        else {
+            printf("%s is not a multiple of 11.\n",num);
         }
     }
 
