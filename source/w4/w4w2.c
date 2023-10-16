@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 int main(){
-    int n,i,j,change,m1=0,m2=0,m3=0,s1,s2,s3;
+    int n,i,j,change;
     float ans;
     scanf("%d",&n);
     int* num=(int*)malloc(n*sizeof(int));
