@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    char num[1001];    
+    char num[1000];    
     while(1){
         int sum1=0,sum2=0,i,d;
         scanf("%s",num);
