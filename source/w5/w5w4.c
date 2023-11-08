@@ -49,12 +49,7 @@ int main(){
                 j++;
             }
             printf("%d ",i);
-            if(num[n-1]==num[n]){
-                printf("1\n");
-            }
-            else{
-                printf("2\n");
-            }
+            printf("%d\n",(num[n]-num[n-1])+1);
         }
         free(num);
     }
