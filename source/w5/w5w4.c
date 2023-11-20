@@ -2,8 +2,8 @@
 #include<stdlib.h>
 
 int main(){
-    int n,end,i,j,change;
-    while((end=scanf("%d",&n))!=EOF){
+    int n,i,j,change;
+    while(scanf("%d",&n)!=EOF){
         int* num=(int*)malloc(n*sizeof(int));
         for(i=0;i<n;i++){
             scanf("%d",&num[i]);
