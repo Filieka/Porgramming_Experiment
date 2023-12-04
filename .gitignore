@@ -67,9 +67,6 @@ source/.vscode/*
 #
 build/
 runtest/
-source/w7/w7w2.c
-source/w7/w7w4.c 
-source/w8/
 
 # Local History for Visual Studio Code
 .history/

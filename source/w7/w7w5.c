@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 int main(){
-    int xl,h,xr,max=0,min=0,i;
+    int xl,h,xr,max=0,i;
     int* house=(int*)malloc(sizeof(int));
     while(scanf("%d%d%d",&xl,&h,&xr)!=EOF){
         if(max<xr){
