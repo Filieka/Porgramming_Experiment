@@ -34,6 +34,7 @@ void moveonto(int num1,int num2,int* ans,int max){
             i=search(num1,ans);
         }
     }
+    num1_location=search(num1,ans);
     int snap=ans[num1_location];
     if(num1==num2){
         return;
@@ -58,6 +59,7 @@ void moveover(int num1,int num2,int* ans,int max){
             i=search(num1,ans);
         }
     }
+    num1_location=search(num1,ans);
     int snap=ans[num1_location];
     if(num1==num2){
         for(i=num1_location;ans[i]!=-1;i++){}
