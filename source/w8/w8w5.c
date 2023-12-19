@@ -21,7 +21,7 @@ char judge(char c,int i,int j,char board[SIZE][SIZE]){
     
 }
 
-int main(){
+int main( ){
     char board[SIZE][SIZE];
     int i,j;
     char ans;
