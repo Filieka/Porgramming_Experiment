@@ -15,7 +15,7 @@ char judge(char c,int i,int j,char board[SIZE][SIZE]){
     if(j<SIZE&&down){
         return c;
     }
-    if(i>3&&leftdown){
+    if(i>3&&j<SIZE-4&&leftdown){
         return c;
     }
     
