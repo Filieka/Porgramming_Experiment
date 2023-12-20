@@ -19,10 +19,10 @@ int main(){
     scanf("%f%*c%f",&point.x,&point.y);
     s=(float)fabs(sl);
     if(s==line.slope){
-        printf("Yes");
+        printf("Yes\n");
     }
     else{
-        printf("No");
+        printf("No\n");
     }
     
   
