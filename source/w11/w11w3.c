@@ -18,7 +18,6 @@ void las(int i,int n,char* in){
             j+=2;
             k=k+count;
         }
-        //ans[j]=0;
         las(i+1,n,ans);
         free(ans);
     }
