@@ -1,27 +1,30 @@
 #include<stdio.h>
 
-int f(int x){
-    return 3*x+1;
-}
-
-int g(int x,int y){
-    return x*y-3;
+int eval(int* i,char* exp){
+    while(exp[*i]==' '||exp[*i]=='('||exp[*i]==','||exp[*i]==')'){
+        (*i)++;
+    }
+    if(exp[*i]=='F'){
+        (*i)++;
+        return eval(i,exp)*3+1;
+    }
+    else if(exp[*i]=='G'){
+        (*i)++;
+        return eval(i,exp)*eval(i,exp)-3;
+    }
+    else{
+        int num=0;
+        while(exp[*i]>='0'&&exp[*i]<='9'){
+            num=num*10+exp[*i]-'0';
+            (*i)++;
+        }
+        return num;
+    }
 }
 
 int main(){
-    int i,ans;
-    char cal[100];
-    char lest;
-    scanf("%s",cal);
-    for(i=0;cal[i]!='\0';i++){
-        lest=' ';
-        if(cal[i]=='F'||cal[i]=='G'){
-            lest=cal[i];
-        }
-    }
-    if(lest==' '){}
-    if(lest=='F'){
-
-    }
-
+    int i=0;
+    char exp[40];
+    gets(exp);
+    printf("%d",eval(&i,exp));
 }
