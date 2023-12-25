@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int state(int i,int j,char g[2][5][7]){
+int state(int i,int j,int l,int w,char g[2][100][100]){
     int x,y,t=0;
     for(x=-1;x<=1;x++){
         for(y=-1;y<=1;y++){
-            if(!(x==0&&y==0)&&i+x>-1&&i+x<5&&j+y>-1&&j+y<7){
+            if(!(x==0&&y==0)&&i+x>-1&&i+x<l&&j+y>-1&&j+y<w){
                 if(g[0][i+x][j+y]=='1'){
                     t++;
                 }
@@ -15,21 +15,34 @@ int state(int i,int j,char g[2][5][7]){
 }
 
 int main(){
-    int k,i,j,a,t;
-    char g[2][5][7];
-    scanf("%d",&k);
-    for(i=0;i<5;i++){
-        for(j=0;j<7;j++){
+    int k,i,j,a,t,l=0,w=0,count=0;
+    char s;
+    char g[2][100][100];
+    for(i=0;i<100;i++){
+        for(j=0;j<100;j++){
             g[0][i][j]='0';
             g[1][i][j]='0';
-            scanf(" %c",&g[0][i][j]);
         }
     }
+    scanf("%d",&k);
+    scanf("%*c");
+    while(EOF!=scanf("%c",&s)){
+        if(s!='\n'){
+            g[0][l][count]=s;
+            count++;
+            w=count;
+        }
+        else{
+            l++;
+            count=0;
+        }
+    }
+    l++;
     for(a=0;a<k;a++){
-        for(i=0;i<5;i++){
-            for(j=0;j<7;j++){
+        for(i=0;i<l;i++){
+            for(j=0;j<w;j++){
                 t=0;
-                t=state(i,j,g);
+                t=state(i,j,l,w,g);
                 if(t>=2){
                     if(g[0][i][j]=='1'){
                         if(t<=3){
@@ -53,15 +66,15 @@ int main(){
                 }
             }   
         }
-        for(i=0;i<5;i++){
-            for(j=0;j<7;j++){
+        for(i=0;i<l;i++){
+            for(j=0;j<w;j++){
                 g[0][i][j]=g[1][i][j];
                 g[1][i][j]='0';
             }
         }
     }
-    for(i=0;i<5;i++){
-        for(j=0;j<7;j++){
+    for(i=0;i<l;i++){
+        for(j=0;j<w;j++){
             printf("%c",g[0][i][j]);
         }
         printf("\n");
